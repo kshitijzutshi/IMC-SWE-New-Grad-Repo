@@ -33,35 +33,36 @@ def inc_i_j(i, j, stack):
     # stack = lambda x: x[]
 
 # stack = []
-# ops = ['push 4', 'push 5', 'inc 2 1', 'pop']
+ops = ['push 4', 'push 5', 'inc 2 1', 'pop']
 
-# for op in ops:
-#     op_arr = op.split(" ")
-#     if op_arr[0] == "push":
-#         stack.append(op_arr[1])
-#         print(stack)
-#     elif op_arr[0] == "inc":
-#         inc_i_j(op_arr[1], op_arr[2], stack)
-#         print(stack)
-#     elif op_arr[0] == "pop":
-#         pop_n(stack)
-#         print(stack)
-#     elif op_arr[0] == "empty":
-#         is_empty(stack)
-#         print(stack)
-#     elif op_arr[0] == "peek":
-#         peek(stack)
-#         print(stack)
-#     elif op_arr[0] == "sum":
-#         stack_sum(stack)
-#         print(stack)
+for op in ops:
+    op_arr = op.split(" ")
+    if op_arr[0] == "push":
+        stack.append(op_arr[1])
+        print(stack)
+    elif op_arr[0] == "inc":
+        inc_i_j(op_arr[1], op_arr[2], stack)
+        print(stack)
+    elif op_arr[0] == "pop":
+        pop_n(stack)
+        print(stack)
+    elif op_arr[0] == "empty":
+        is_empty(stack)
+        print(stack)
+    elif op_arr[0] == "peek":
+        peek(stack)
+        print(stack)
+    elif op_arr[0] == "sum":
+        stack_sum(stack)
+        print(stack)
     
-# print(stack)
+print(stack)
 
 a = 2
 b = 1
 c = [2,3,4,5]
 d = 1
 for i in range (c[2:][0], len(c[2:])):
-    c[i]=c[i]+d
+    c[2:][i]=c[2:][i]+d
 print(c)
+print(f"WW - {c[2:][0]}")
